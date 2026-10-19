@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FAF8F5;
+  --foreground: #242120;
+  --card-bg: #FFFFFF;
+  --brand-terracotta: #af4930;
+  --brand-terracotta-dark: #913a24;
+  --brand-terracotta-light: #fcf4f2;
+  --brand-terracotta-border: #f3d5cd;
+}
+
+@theme {
+  --color-cream: #FAF8F5;
+  --color-espresso: #242120;
+  --color-terracotta: #af4930;
+  --color-terracotta-dark: #913a24;
+  --color-terracotta-light: #fcf4f2;
+  --font-serif: var(--font-outfit), sans-serif;
+  --font-display: var(--font-outfit), sans-serif;
+  --font-sans: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  background-color: #FAF8F5;
+  color: #242120;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FAF8F5;
+  color: #242120;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  min-height: 100dvh;
+  touch-action: manipulation;
+  overflow-x: hidden;
+}
+
+/* Star pop animation */
+@keyframes star-pop {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.18);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-star-pop {
+  animation: star-pop 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Toast entrance */
+@keyframes toast-slide-down {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -15px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+.animate-toast-enter {
+  animation: toast-slide-down 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
